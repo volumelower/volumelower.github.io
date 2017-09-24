@@ -40,6 +40,7 @@ input#show:checked ~ .show:before {
 }
 input#show:checked ~ .hide:before {
     content: "Not Hecked"
+    color: #ee00ff;
 }
 
 input#hide:checked ~ .hide:before {
@@ -47,6 +48,7 @@ input#hide:checked ~ .hide:before {
 }
 input#hide:checked ~ .show:before {
     content: "Hecked"
+    color: #ee00ff;
 }
 input#show:checked ~ span#content {
     opacity: 1;
