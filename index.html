@@ -3,7 +3,54 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Illya Dance</title><style type="text/css"></style>
   </head> 
-<body>
+<head>
+<style>
+label { position: absolute; top:0; left:0}
+
+input#show, input#hide {
+    display:none;
+}
+
+span#content {
+    display: block;
+    -webkit-transition: opacity 1s ease-out;
+    transition: opacity 1s ease-out;
+    opacity: 0; 
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+}
+
+input#show:checked ~ .show:before {
+    content: ""
+}
+input#show:checked ~ .hide:before {
+    content: "Not Hecked"
+}
+
+input#hide:checked ~ .hide:before {
+    content: ""
+}
+input#hide:checked ~ .show:before {
+    content: "Hecked"
+}
+input#show:checked ~ span#content {
+    opacity: 1;
+    font-size: 100%;
+    height: auto;
+    color: #ee00ff;
+}
+input#hide:checked ~ span#content {
+    display: block;
+    -webkit-transition: opacity 1s ease-out;
+    transition: opacity 1s ease-out;
+    opacity: 0; 
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+}
+</style>	
+	<body>
 	<p>&nbsp;</p>
 <input type="radio" id="show" name="group">   
 <input type="radio" id="hide" name="group" checked>
